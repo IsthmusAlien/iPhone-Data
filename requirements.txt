@@ -3,3 +3,9 @@ numpy
 pytest
 flake8
 dvc
+streamlit
+scikit-learn
+matplotlib
+seaborn
+shap
+scikit-multiflow   # for drift detection

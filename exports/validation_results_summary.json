@@ -1,0 +1,355 @@
+{
+  "validation_run_info": {
+    "timestamp": "2025-08-21T12:41:31.310870",
+    "dataset": "Flipkart iPhones Dataset",
+    "total_rows": 558,
+    "total_columns": 14
+  },
+  "overall_summary": {
+    "total_expectations": 19,
+    "passed_expectations": 17,
+    "failed_expectations": 2,
+    "success_rate_percentage": 89.47
+  },
+  "detailed_results": [
+    {
+      "expectation_id": 1,
+      "expectation_name": "Max Order Quantity Range",
+      "expectation_type": "ExpectColumnValuesToBeBetween",
+      "column": "maxOrderQuantityAllowed",
+      "parameters": {
+        "min_value": 1,
+        "max_value": 1000
+      },
+      "success": true,
+      "result_details": {
+        "observed_value": null,
+        "element_count": null,
+        "missing_count": null,
+        "missing_percent": null,
+        "unexpected_count": null,
+        "unexpected_percent": null
+      }
+    },
+    {
+      "expectation_id": 2,
+      "expectation_name": "Valid Stock Status",
+      "expectation_type": "ExpectColumnValuesToBeInSet",
+      "column": "availability_displayState",
+      "parameters": {
+        "value_set": [
+          "IN_STOCK",
+          "OUT_OF_STOCK",
+          "LIMITED_STOCK",
+          "TEMPORARILY_UNAVAILABLE"
+        ]
+      },
+      "success": false,
+      "result_details": {
+        "observed_value": null,
+        "element_count": null,
+        "missing_count": null,
+        "missing_percent": null,
+        "unexpected_count": null,
+        "unexpected_percent": null
+      }
+    },
+    {
+      "expectation_id": 3,
+      "expectation_name": "MRP >= Final Price",
+      "expectation_type": "ExpectColumnPairValuesAToBeGreaterThanB",
+      "column": "pricing_mrp_value vs pricing_finalPrice_value",
+      "parameters": {
+        "column_A": "pricing_mrp_value",
+        "column_B": "pricing_finalPrice_value",
+        "or_equal": true
+      },
+      "success": true,
+      "result_details": {
+        "observed_value": null,
+        "element_count": null,
+        "missing_count": null,
+        "missing_percent": null,
+        "unexpected_count": null,
+        "unexpected_percent": null
+      }
+    },
+    {
+      "expectation_id": 4,
+      "expectation_name": "Rating Range 1-5",
+      "expectation_type": "ExpectColumnValuesToBeBetween",
+      "column": "rating_average",
+      "parameters": {
+        "min_value": 1.0,
+        "max_value": 5.0
+      },
+      "success": true,
+      "result_details": {
+        "observed_value": null,
+        "element_count": null,
+        "missing_count": null,
+        "missing_percent": null,
+        "unexpected_count": null,
+        "unexpected_percent": null
+      }
+    },
+    {
+      "expectation_id": 5,
+      "expectation_name": "Non-negative Rating Count",
+      "expectation_type": "ExpectColumnValuesToBeBetween",
+      "column": "rating_count",
+      "parameters": {
+        "min_value": 0
+      },
+      "success": true,
+      "result_details": {
+        "observed_value": null,
+        "element_count": null,
+        "missing_count": null,
+        "missing_percent": null,
+        "unexpected_count": null,
+        "unexpected_percent": null
+      }
+    },
+    {
+      "expectation_id": 6,
+      "expectation_name": "Non-negative Review Count",
+      "expectation_type": "ExpectColumnValuesToBeBetween",
+      "column": "rating_reviewCount",
+      "parameters": {
+        "min_value": 0
+      },
+      "success": true,
+      "result_details": {
+        "observed_value": null,
+        "element_count": null,
+        "missing_count": null,
+        "missing_percent": null,
+        "unexpected_count": null,
+        "unexpected_percent": null
+      }
+    },
+    {
+      "expectation_id": 7,
+      "expectation_name": "Title Not Null",
+      "expectation_type": "ExpectColumnValuesToNotBeNull",
+      "column": "titles_title",
+      "parameters": {},
+      "success": true,
+      "result_details": {
+        "observed_value": null,
+        "element_count": null,
+        "missing_count": null,
+        "missing_percent": null,
+        "unexpected_count": null,
+        "unexpected_percent": null
+      }
+    },
+    {
+      "expectation_id": 8,
+      "expectation_name": "Title Contains iPhone",
+      "expectation_type": "ExpectColumnValuesToMatchRegex",
+      "column": "titles_title",
+      "parameters": {
+        "regex": ".*iPhone.*"
+      },
+      "success": false,
+      "result_details": {
+        "observed_value": null,
+        "element_count": null,
+        "missing_count": null,
+        "missing_percent": null,
+        "unexpected_count": null,
+        "unexpected_percent": null
+      }
+    },
+    {
+      "expectation_id": 9,
+      "expectation_name": "Key Specs Not Null",
+      "expectation_type": "ExpectColumnValuesToNotBeNull",
+      "column": "keySpecs",
+      "parameters": {},
+      "success": true,
+      "result_details": {
+        "observed_value": null,
+        "element_count": null,
+        "missing_count": null,
+        "missing_percent": null,
+        "unexpected_count": null,
+        "unexpected_percent": null
+      }
+    },
+    {
+      "expectation_id": 10,
+      "expectation_name": "Valid Image URLs",
+      "expectation_type": "ExpectColumnValuesToMatchRegex",
+      "column": "media_images",
+      "parameters": {
+        "regex": "https://.*\\.jpeg.*"
+      },
+      "success": true,
+      "result_details": {
+        "observed_value": null,
+        "element_count": null,
+        "missing_count": null,
+        "missing_percent": null,
+        "unexpected_count": null,
+        "unexpected_percent": null
+      }
+    },
+    {
+      "expectation_id": 11,
+      "expectation_name": "Discount Amount >= 0",
+      "expectation_type": "expect_column_values_to_be_between",
+      "column": "pricing_discountAmount",
+      "parameters": {
+        "min_value": 0.0
+      },
+      "success": true,
+      "result_details": {
+        "observed_value": null,
+        "element_count": null,
+        "missing_count": null,
+        "missing_percent": null,
+        "unexpected_count": null,
+        "unexpected_percent": null
+      }
+    },
+    {
+      "expectation_id": 12,
+      "expectation_name": "Total Discount >= 0",
+      "expectation_type": "expect_column_values_to_be_between",
+      "column": "pricing_totalDiscount",
+      "parameters": {
+        "min_value": 0.0
+      },
+      "success": true,
+      "result_details": {
+        "observed_value": null,
+        "element_count": null,
+        "missing_count": null,
+        "missing_percent": null,
+        "unexpected_count": null,
+        "unexpected_percent": null
+      }
+    },
+    {
+      "expectation_id": 13,
+      "expectation_name": "Storage Specs Present",
+      "expectation_type": "expect_column_values_to_match_regex",
+      "column": "keySpecs",
+      "parameters": {
+        "regex": ".*(GB|TB).*"
+      },
+      "success": true,
+      "result_details": {
+        "observed_value": null,
+        "element_count": null,
+        "missing_count": null,
+        "missing_percent": null,
+        "unexpected_count": null,
+        "unexpected_percent": null
+      }
+    },
+    {
+      "expectation_id": 14,
+      "expectation_name": "Display Size Present",
+      "expectation_type": "expect_column_values_to_match_regex",
+      "column": "keySpecs",
+      "parameters": {
+        "regex": ".*(cm|inch).*"
+      },
+      "success": true,
+      "result_details": {
+        "observed_value": null,
+        "element_count": null,
+        "missing_count": null,
+        "missing_percent": null,
+        "unexpected_count": null,
+        "unexpected_percent": null
+      }
+    },
+    {
+      "expectation_id": 15,
+      "expectation_name": "Camera Specs Present",
+      "expectation_type": "expect_column_values_to_match_regex",
+      "column": "keySpecs",
+      "parameters": {
+        "regex": ".*MP.*"
+      },
+      "success": true,
+      "result_details": {
+        "observed_value": null,
+        "element_count": null,
+        "missing_count": null,
+        "missing_percent": null,
+        "unexpected_count": null,
+        "unexpected_percent": null
+      }
+    },
+    {
+      "expectation_id": 16,
+      "expectation_name": "availability_displayState Not Null",
+      "expectation_type": "ExpectColumnValuesToNotBeNull",
+      "column": "availability_displayState",
+      "parameters": {},
+      "success": true,
+      "result_details": {
+        "observed_value": null,
+        "element_count": null,
+        "missing_count": null,
+        "missing_percent": null,
+        "unexpected_count": null,
+        "unexpected_percent": null
+      }
+    },
+    {
+      "expectation_id": 17,
+      "expectation_name": "pricing_finalPrice_value Not Null",
+      "expectation_type": "ExpectColumnValuesToNotBeNull",
+      "column": "pricing_finalPrice_value",
+      "parameters": {},
+      "success": true,
+      "result_details": {
+        "observed_value": null,
+        "element_count": null,
+        "missing_count": null,
+        "missing_percent": null,
+        "unexpected_count": null,
+        "unexpected_percent": null
+      }
+    },
+    {
+      "expectation_id": 18,
+      "expectation_name": "pricing_mrp_value Not Null",
+      "expectation_type": "ExpectColumnValuesToNotBeNull",
+      "column": "pricing_mrp_value",
+      "parameters": {},
+      "success": true,
+      "result_details": {
+        "observed_value": null,
+        "element_count": null,
+        "missing_count": null,
+        "missing_percent": null,
+        "unexpected_count": null,
+        "unexpected_percent": null
+      }
+    },
+    {
+      "expectation_id": 19,
+      "expectation_name": "titles_title Not Null",
+      "expectation_type": "ExpectColumnValuesToNotBeNull",
+      "column": "titles_title",
+      "parameters": {},
+      "success": true,
+      "result_details": {
+        "observed_value": null,
+        "element_count": null,
+        "missing_count": null,
+        "missing_percent": null,
+        "unexpected_count": null,
+        "unexpected_percent": null
+      }
+    }
+  ]
+}

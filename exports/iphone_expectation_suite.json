@@ -1,0 +1,175 @@
+{
+  "name": "iphone_data_quality_suite",
+  "id": "39c9c677-377d-40af-93d8-b020e0aa6b4c",
+  "expectations": [
+    {
+      "type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "maxOrderQuantityAllowed",
+        "min_value": 1.0,
+        "max_value": 1000.0
+      },
+      "meta": {},
+      "id": "c19335e7-c9e1-45b1-86dd-cd2c8e1bc7b7"
+    },
+    {
+      "type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "availability_displayState",
+        "value_set": [
+          "IN_STOCK",
+          "OUT_OF_STOCK",
+          "LIMITED_STOCK",
+          "TEMPORARILY_UNAVAILABLE"
+        ]
+      },
+      "meta": {},
+      "id": "8f33e7da-0322-4186-b849-314b630762bf"
+    },
+    {
+      "type": "expect_column_pair_values_a_to_be_greater_than_b",
+      "kwargs": {
+        "column_A": "pricing_mrp_value",
+        "column_B": "pricing_finalPrice_value",
+        "or_equal": true
+      },
+      "meta": {},
+      "id": "45d896fd-329e-4db8-a2ef-b3b927d2467b"
+    },
+    {
+      "type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "rating_average",
+        "min_value": 1.0,
+        "max_value": 5.0
+      },
+      "meta": {},
+      "id": "c0b1eae5-977d-475c-98f7-11a463dced28"
+    },
+    {
+      "type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "rating_count",
+        "min_value": 0.0
+      },
+      "meta": {},
+      "id": "906da9a1-b8ec-443f-b3b1-2f6bb0a8b284"
+    },
+    {
+      "type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "rating_reviewCount",
+        "min_value": 0.0
+      },
+      "meta": {},
+      "id": "cc6a9063-3d19-432f-a21e-493252ab4dbe"
+    },
+    {
+      "type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "titles_title"
+      },
+      "meta": {},
+      "id": "f5b5f470-d7e8-4419-9f7f-789d62b2e13b"
+    },
+    {
+      "type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "titles_title",
+        "regex": ".*iPhone.*"
+      },
+      "meta": {},
+      "id": "6acfae03-4140-4786-bf76-0d980f22c92f"
+    },
+    {
+      "type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "keySpecs"
+      },
+      "meta": {},
+      "id": "8a673f8e-218c-484b-b405-9042d8d49500"
+    },
+    {
+      "type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "media_images",
+        "regex": "https://.*\\.jpeg.*"
+      },
+      "meta": {},
+      "id": "67ec253f-8229-43c4-85f8-9cab94e42aa1"
+    },
+    {
+      "type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "pricing_discountAmount",
+        "min_value": 0.0
+      },
+      "meta": {},
+      "id": "992fb013-6371-4781-9e07-42c25c47dfdf"
+    },
+    {
+      "type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "pricing_totalDiscount",
+        "min_value": 0.0
+      },
+      "meta": {},
+      "id": "6b8318f2-6ac5-4ca1-a870-0426fe8b6e1d"
+    },
+    {
+      "type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "keySpecs",
+        "regex": ".*(GB|TB).*"
+      },
+      "meta": {},
+      "id": "ad8a4644-6e6f-4e7d-b0d5-4771e2e3be9b"
+    },
+    {
+      "type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "keySpecs",
+        "regex": ".*(cm|inch).*"
+      },
+      "meta": {},
+      "id": "167ab519-cf00-48c6-9d33-9b85eb0b98cc"
+    },
+    {
+      "type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "keySpecs",
+        "regex": ".*MP.*"
+      },
+      "meta": {},
+      "id": "0511c79c-97fb-45fb-9fb8-5fc74d1fd35e"
+    },
+    {
+      "type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "availability_displayState"
+      },
+      "meta": {},
+      "id": "dab692e3-9fb9-4e67-ad9e-0075ba241a8c"
+    },
+    {
+      "type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "pricing_finalPrice_value"
+      },
+      "meta": {},
+      "id": "d97adc50-f53c-4ca0-b244-8e3e7c2ed6a4"
+    },
+    {
+      "type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "pricing_mrp_value"
+      },
+      "meta": {},
+      "id": "0b5575ed-b884-4775-a4f4-45222355a6cd"
+    }
+  ],
+  "meta": {
+    "great_expectations_version": "1.5.8"
+  },
+  "notes": null
+}
